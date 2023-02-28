@@ -1,6 +1,8 @@
 #! /usr/env/python3
 
+import random
 import sys
 
-x, y = map(int, sys.argv[1:-1])
-print (x,y)
+random.seed(int(sys.argv[-1])) # fix seed of random generator to last argument
+
+print( random.randrange(-1000, 1000), random.randrange(-1000, 1000))
